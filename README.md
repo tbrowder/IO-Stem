@@ -20,7 +20,7 @@ say "finance.data".IO.filename; # OUTPUT: «finance␤»
 DESCRIPTION
 ===========
 
-**Class IO::Stem** is an extension of core class `IO::Path` which currently has no method to provide that part of a basename remaing after its extension is removed. Its methods are intended to be candidates for inclusion in the next major release of Raku. Each method name has been found to be used for the same purpose in several well-known domains including `make`, `LaTeX`, and `shell`.
+**Class IO::Stem** is an extension of core class `IO::Path` which currently has no method to provide that part of a basename remaining after its extension is removed. Its methods are intended to be candidates for inclusion in the next major release of Raku. Each method name has been found to be used for the same purpose in several well-known domains including `make`, `LaTeX`, and `shell`.
 
 AUTHOR
 ======

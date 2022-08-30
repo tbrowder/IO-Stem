@@ -1,6 +1,0 @@
-use Test;
-use IO::Stem;
-
-pass "replace me";
-
-done-testing;
