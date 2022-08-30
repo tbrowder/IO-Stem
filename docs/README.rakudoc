@@ -1,0 +1,38 @@
+=begin pod
+
+=head1 NAME
+
+B<IO::Stem> - Provides the part of an IO.basename left with the IO.extension removed
+
+=head1 SYNOPSIS
+
+=begin code :lang<raku>
+
+use IO::Stem;
+say "finance.data".IO.stem;     # OUTPUT: «finance␤»
+# aliases for method 'stem':
+say "finance.data".IO.barename; # OUTPUT: «finance␤»
+say "finance.data".IO.name;     # OUTPUT: «finance␤»
+say "finance.data".IO.filename; # OUTPUT: «finance␤»
+
+=end code
+
+=head1 DESCRIPTION
+
+B<Class IO::Stem> is an extension of core class C<IO::Path> which currently
+has no method to provide that part of a basename remaing after its extension is removed.
+Its methods are intended to be candidates for inclusion in the next major release of Raku.
+Each method name has been found to be used for the same purpose in several well-known domains including
+C<make>, C<LaTeX>, and C<shell>.
+
+=head1 AUTHOR
+
+Tom Browder <tbrowder@acm.org>
+
+=head1 COPYRIGHT AND LICENSE
+
+Copyright 2022 Tom Browder
+
+This library is free software; you may redistribute it or modify it under the Artistic License 2.0.
+
+=end pod

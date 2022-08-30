@@ -7,7 +7,7 @@
   ],
   "depends": [
   ],
-  "description": "blah blah blah",
+  "description": "Provides the part of an IO.basename left with the IO.extension removed",
   "license": "Artistic-2.0",
   "name": "IO::Stem",
   "perl": "6.d",
@@ -16,7 +16,7 @@
   },
   "resources": [
   ],
-  "source-url": "",
+  "source-url": "https://github.com/tbrowder/IO-Stem.git",
   "tags": [
   ],
   "test-depends": [
