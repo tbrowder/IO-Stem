@@ -22,6 +22,18 @@ DESCRIPTION
 
 **Class IO::Stem** is an extension of core class `IO::Path` which currently has no method to provide that part of a basename remaining after its extension is removed. Its methods are intended to be candidates for inclusion in the next major release of Raku. Each method name has been found to be used for the same purpose in several well-known domains including `make`, `LaTeX`, and `shell`.
 
+For heavier work on paths it is easier to get a new **IO::Stem** object and save some keystrokes. The same results shown in the code block above can be expressed as follows:
+
+```raku
+use IO::Stem;
+my $o = IO::Stem.new: "finance.data";
+say $o.stem;     # OUTPUT: «finance␤»
+# aliases for method 'stem':
+say $o.barename; # OUTPUT: «finance␤»
+say $o.name;     # OUTPUT: «finance␤»
+say $o.filename; # OUTPUT: «finance␤»
+```
+
 AUTHOR
 ======
 

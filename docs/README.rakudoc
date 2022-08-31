@@ -7,14 +7,12 @@ B<IO::Stem> - Provides the part of an IO.basename left with the IO.extension rem
 =head1 SYNOPSIS
 
 =begin code :lang<raku>
-
 use IO::Stem;
 say "finance.data".IO.stem;     # OUTPUT: «finance␤»
 # aliases for method 'stem':
 say "finance.data".IO.barename; # OUTPUT: «finance␤»
 say "finance.data".IO.name;     # OUTPUT: «finance␤»
 say "finance.data".IO.filename; # OUTPUT: «finance␤»
-
 =end code
 
 =head1 DESCRIPTION
@@ -25,6 +23,20 @@ after its extension is removed.  Its methods are intended to be
 candidates for inclusion in the next major release of Raku.  Each
 method name has been found to be used for the same purpose in several
 well-known domains including C<make>, C<LaTeX>, and C<shell>.
+
+For heavier work on paths it is easier to get a new B<IO::Stem> object
+and save some keystrokes. The same results shown in the code
+block above can be expressed as follows:
+
+=begin code :lang<raku>
+use IO::Stem;
+my $o = IO::Stem.new: "finance.data";
+say $o.stem;     # OUTPUT: «finance␤»
+# aliases for method 'stem':
+say $o.barename; # OUTPUT: «finance␤»
+say $o.name;     # OUTPUT: «finance␤»
+say $o.filename; # OUTPUT: «finance␤»
+=end code
 
 =head1 AUTHOR
 
